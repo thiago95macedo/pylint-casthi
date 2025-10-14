@@ -355,7 +355,6 @@ class MainTest(unittest.TestCase):
         expected_errors = {}
         self.assertEqual(expected_errors, real_errors)
 
-    @unittest.skipUnless(not sys.platform.startswith("win"), "TOOD: Fix with windows")  # TODO: Fix it
     def test_145_check_fstring_sqli(self):
         """Verify the linter is capable of finding SQL Injection vulnerabilities
         when using fstrings.
@@ -491,7 +490,6 @@ def fstring_no_sqli(self):
         self.assertDictEqual(real_errors, expected_errors)
         self.assertIn("Invalid manifest versions format ['8.0saas']", str(warn.warning))
 
-    @unittest.skipUnless(not sys.platform.startswith("win"), "Windows works a little different with executable files")
     def test_invalid_name_executable(self):
         """Test valid case for file name of executable-file instead of executable_file.py"""
         extra_params = [

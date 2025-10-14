@@ -668,13 +668,10 @@ class CasThiAddons(CasThiBaseChecker, BaseChecker):
     )
 
     checks_maxmin_casthi_version = {
-        # For v14.0 use custom_logging.py checks e.g. "translation-not-lazy"
-        "translation-contains-variable": {
-            "casthi_maxversion": "13.0",
-        },
-        "no-raise-unlink": {"casthi_minversion": "15.0"},
-        "prefer-env-translation": {"casthi_minversion": "18.0"},
-        "deprecated-name-get": {"casthi_minversion": "17.0"},
+        # Verificações específicas para CasThi atual
+        "no-raise-unlink": {"casthi_minversion": "16.0"},
+        "prefer-env-translation": {"casthi_minversion": "16.0"},
+        "deprecated-name-get": {"casthi_minversion": "16.0"},
     }
 
     def __init__(self, linter: PyLinter):

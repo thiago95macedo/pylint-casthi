@@ -19,25 +19,9 @@ MANIFEST_FILES = [
 ]
 DFTL_README_TMPL_URL = "https://github.com/OCA/maintainer-tools/blob/master/template/module/README.rst"
 DFTL_VALID_CASTHI_VERSIONS = [
-    "4.2",
-    "5.0",
-    "6.0",
-    "6.1",
-    "7.0",
-    "8.0",
-    "9.0",
-    "10.0",
-    "11.0",
-    "12.0",
-    "13.0",
-    "14.0",
-    "15.0",
     "16.0",
-    "17.0",
-    "18.0",
-    "19.0",
 ]
-DFTL_MANIFEST_VERSION_FORMAT = r"({valid_casthi_versions})\.\d+\.\d+\.\d+$"
+DFTL_MANIFEST_VERSION_FORMAT = r"16\.0\.\d+\.\d+\.\d+$"
 TRANSLATION_METHODS = ("_", "_lt")
 EMAIL_RE = re.compile(r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$")
 

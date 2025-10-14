@@ -16,6 +16,8 @@
 
 Enable custom checks for CasThi modules.
 
+This plugin provides specialized linting rules for CasThi development, focusing on the current CasThi version with optimized performance and simplified configuration.
+
 [//]: # (start-checks)
 
 Short Name | Description | Code
@@ -109,45 +111,17 @@ Add to your ".pre-commit-config.yaml" configuration file the following input
 
 # Usage
 
-    pylint --load-plugins=pylint_casthi -e casthilint path/to/test
+    pylint --load-plugins=pylint_casthi path/to/test
 
-or use configuration file you can generate the OCA one using the following template repository:
-
-    https://github.com/OCA/oca-addons-repo-template
-
-Then running
+or use configuration file:
 
     pylint --rcfile=.pylintrc path/to/test
-
 
 Example to test only pylint_casthi checks:
 
     pylint --load-plugins=pylint_casthi -d all -e casthilint {ADDONS-PATH}/*
 
-There are checks only valid for a particular CasThi version
-To know what version of casthi are you running pylint needs the parameter
-
-    pylint --load-plugins=pylint_casthi --valid-casthi-versions={YOUR_CASTHI_VERSION}
-
-with particular casthi version e.g. `"16.0"`
-
-Check valid only for casthi >= 18.0
-
-   prefer-env-translation
-
-Checks valid only for casthi >= 14.0
-
-    translation-format-interpolation
-    translation-format-truncated
-    translation-fstring-interpolation
-    translation-not-lazy
-    translation-too-few-args
-    translation-too-many-args
-    translation-unsupported-format
-
-Checks valid only for casthi <= 13.0
-
-    translation-contains-variable
+This plugin is optimized for the current CasThi version and provides the best performance and accuracy for CasThi module development.
 
 
 [//]: # (start-example)
