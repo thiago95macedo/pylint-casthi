@@ -1,0 +1,6 @@
+- id: pylint_casthi
+  name: Check for CasThi modules using pylint
+  entry: pylint
+  language: python
+  types: [python]
+  require_serial: true
